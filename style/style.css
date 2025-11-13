@@ -14,7 +14,9 @@
   --color-btn-text: #5b420d;
 }
 
-/* Reset and globals */
+/* ===========================
+   RESET E CONFIGURAÇÕES GERAIS
+   =========================== */
 * {
   margin: 0;
   padding: 0;
@@ -27,23 +29,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px;
+  padding: 20px;
   color: var(--color-text);
 }
 
+/* Container principal */
 .container {
   background-color: var(--color-container-bg);
-  width: 90%;
+  width: 100%;
   max-width: 650px;
-  padding: 40px;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
+/* Títulos */
 h1 {
   color: var(--color-primary);
-  font-size: 1.8rem;
-  margin-bottom: 25px;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -53,12 +57,14 @@ h2 {
   font-weight: 600;
 }
 
+/* Seção do formulário */
 .form-section {
   margin-bottom: 25px;
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 20px;
 }
 
+/* Grupos de campos */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -71,39 +77,45 @@ label {
   margin-bottom: 5px;
 }
 
+/* Inputs, selects e textarea */
 input, select, textarea {
   width: 100%;
   padding: 10px 14px;
   border: 1px solid var(--color-input-border);
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background-color: #fff;
   transition: all 0.2s;
 }
 
+/* Estilo no foco */
 input:focus, select:focus, textarea:focus {
   border-color: var(--color-focus-border);
   outline: none;
   box-shadow: 0 0 3px var(--color-focus-shadow);
 }
 
+/* Grupos que ficam lado a lado */
 .date-time, .address-group {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
 
+/* Textarea */
 textarea {
   min-height: 100px;
   resize: vertical;
 }
 
+/* Texto opcional */
 .optional {
   font-size: 0.8rem;
   color: var(--color-optional);
   font-weight: 400;
 }
 
+/* Botão */
 .btn {
   width: 100%;
   background-color: var(--color-btn);
@@ -119,4 +131,60 @@ textarea {
 
 .btn:hover {
   background-color: var(--color-btn-hover);
+}
+
+/* ===========================
+      RESPONSIVIDADE
+   =========================== */
+
+/* 🔹 TELAS MUITO PEQUENAS (até 480px) */
+@media (max-width: 480px) {
+
+  /* reduz padding geral */
+  body {
+    padding: 10px;
+  }
+
+  /* reduz padding interno do container */
+  .container {
+    padding: 20px;
+  }
+
+  /* título menor */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* campos lado a lado viram coluna */
+  .date-time,
+  .address-group {
+    flex-direction: column;
+  }
+}
+
+/* 🔹 TELAS MÉDIAS (481px – 768px) */
+@media (max-width: 768px) {
+
+  /* ajusta padding do container */
+  .container {
+    padding: 25px;
+  }
+
+  /* título um pouco maior */
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 🔹 TELAS GRANDES (acima de 900px) */
+@media (min-width: 900px) {
+  /* aumenta título */
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* inputs com fonte maior */
+  input, select, textarea {
+    font-size: 1rem;
+  }
 }
