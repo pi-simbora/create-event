@@ -1,2 +1,2 @@
-# create-event
-tela de criar eventos
+# tela-criar-evento
+essa tela é de criar eventos

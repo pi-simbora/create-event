@@ -1,0 +1,122 @@
+:root {
+  --color-primary: #5d06ff;
+  --color-background: #ffaa00;
+  --color-container-bg: #fffaf0;
+  --color-text: #3c3c3c;
+  --color-heading: #4a4a4a;
+  --color-border: #e0dfd5;
+  --color-input-border: #ddd;
+  --color-focus-border: #d4b06a;
+  --color-focus-shadow: rgba(204, 170, 85, 0.4);
+  --color-optional: #a1a1a1;
+  --color-btn: #f7d97f;
+  --color-btn-hover: #f2ce5b;
+  --color-btn-text: #5b420d;
+}
+
+/* Reset and globals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: var(--color-text);
+}
+
+.container {
+  background-color: var(--color-container-bg);
+  width: 90%;
+  max-width: 650px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--color-heading);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.form-section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-input-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-focus-border);
+  outline: none;
+  box-shadow: 0 0 3px var(--color-focus-shadow);
+}
+
+.date-time, .address-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.optional {
+  font-size: 0.8rem;
+  color: var(--color-optional);
+  font-weight: 400;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--color-btn);
+  border: none;
+  color: var(--color-btn-text);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-btn-hover);
+}
